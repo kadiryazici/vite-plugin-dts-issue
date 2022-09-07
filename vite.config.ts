@@ -11,7 +11,6 @@ const devConfig: UserConfig = {
 
 const prodConfig: UserConfig = {
   plugins: [
-    Vue(), //
     VueJSX(),
     DTS({
       outputDir: 'dist/types',
@@ -19,6 +18,7 @@ const prodConfig: UserConfig = {
       exclude: ['playground'],
       logDiagnostics: true,
     }),
+    Vue(), //
   ],
   build: {
     emptyOutDir: true,
