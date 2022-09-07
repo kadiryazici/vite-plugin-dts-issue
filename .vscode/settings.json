@@ -1,0 +1,10 @@
+{
+  "eslint.format.enable": true,
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true 
+  },
+  "volar.completion.preferredAttrNameCase": "camel",
+  "volar.completion.preferredTagNameCase": "pascal"
+}
