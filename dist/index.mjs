@@ -1,22 +1,22 @@
-import { defineComponent as a, openBlock as t, createElementBlock as n, Fragment as l, createElementVNode as _, renderList as c, toDisplayString as u, createTextVNode as d, ref as f, h as m } from "vue";
-const y = /* @__PURE__ */ d(" " + /* @__PURE__ */ u(5)), h = {
+import { defineComponent as u, openBlock as n, createElementBlock as r, Fragment as l, createElementVNode as d, renderList as a, toDisplayString as p, createTextVNode as f, h as m, createVNode as _ } from "vue";
+const y = /* @__PURE__ */ f(" " + /* @__PURE__ */ p(5)), x = {
   name: "TheListeleme"
-}, N = /* @__PURE__ */ a({
-  ...h,
+}, N = /* @__PURE__ */ u({
+  ...x,
   props: {
     items: { default: () => [] }
   },
   setup(e) {
-    return (r, o) => (t(), n(l, null, [
-      _("ul", null, [
-        (t(!0), n(l, null, c(e.items, (s) => (t(), n("li", {
+    return (t, o) => (n(), r(l, null, [
+      d("ul", null, [
+        (n(!0), r(l, null, a(e.items, (s) => (n(), r("li", {
           key: s.text
-        }, u(s.text), 1))), 128))
+        }, p(s.text), 1))), 128))
       ]),
       y
     ], 64));
   }
-}), g = a({
+}), C = u({
   name: "TheListeleme",
   props: {
     items: {
@@ -25,13 +25,24 @@ const y = /* @__PURE__ */ d(" " + /* @__PURE__ */ u(5)), h = {
     }
   },
   setup(e) {
-    return f(5), () => m(
+    return () => m(
       "ul",
       null,
-      c(e.items, (r) => m("li", {}, r))
+      a(e.items, (t) => m("li", {}, t.text))
     );
   }
-}), x = a({
+}), g = u({
+  name: "TheListeleme",
+  props: {
+    items: {
+      type: Array,
+      default: () => []
+    }
+  },
+  setup(e) {
+    return () => _("ul", null, [...a(e.items, (t) => _("li", null, [t.text]))]);
+  }
+}), h = u({
   name: "TheListeleme",
   props: {
     items: {
@@ -39,26 +50,26 @@ const y = /* @__PURE__ */ d(" " + /* @__PURE__ */ u(5)), h = {
       default: () => []
     }
   }
-}), L = (e, r) => {
+}), L = (e, t) => {
   const o = e.__vccOpts || e;
-  for (const [s, i] of r)
-    o[s] = i;
+  for (const [s, c] of t)
+    o[s] = c;
   return o;
-}, T = /* @__PURE__ */ d(" " + /* @__PURE__ */ u(5));
-function $(e, r, o, s, i, k) {
-  return t(), n(l, null, [
-    _("ul", null, [
-      (t(!0), n(l, null, c(e.items, (p) => (t(), n("li", {
-        key: p.text
-      }, u(p.text), 1))), 128))
+}, T = /* @__PURE__ */ f(" " + /* @__PURE__ */ p(5));
+function S(e, t, o, s, c, $) {
+  return n(), r(l, null, [
+    d("ul", null, [
+      (n(!0), r(l, null, a(e.items, (i) => (n(), r("li", {
+        key: i.text
+      }, p(i.text), 1))), 128))
     ]),
     T
   ], 64);
 }
-const C = /* @__PURE__ */ L(x, [["render", $]]);
+const A = /* @__PURE__ */ L(h, [["render", S]]);
 export {
   N as Lister,
-  C as ListerNormalSetup,
-  g as ListerTS,
+  A as ListerNormalSetup,
+  C as ListerTS,
   g as ListerTSX
 };
